@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: shadone_development
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  shadone:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://postgres:secretpassword@postgres/shadone_development
+      GOOGLE_CLIENT_ID: 969106766203-kb99m193t64bjl873948s278vnlvhodo.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: 
+
+volumes:
+  pgdata:
