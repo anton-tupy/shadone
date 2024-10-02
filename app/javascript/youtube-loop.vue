@@ -223,9 +223,13 @@ export default {
       selectItems: [
         { id: 1, speed: 0.5 },
         { id: 2, speed: 0.75 },
-        { id: 3, speed: 1 },
-        { id: 4, speed: 1.25 },
-        { id: 5, speed: 1.5 },
+        { id: 3, speed: 0.8 },
+        { id: 4, speed: 0.85 },
+        { id: 5, speed: 0.9 },
+        { id: 6, speed: 0.95 },
+        { id: 7, speed: 1 },
+        { id: 8, speed: 1.25 },
+        { id: 9, speed: 1.5 },
       ],
       intervalId: null,
     }

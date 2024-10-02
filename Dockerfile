@@ -43,4 +43,4 @@ RUN bundle exec rake assets:precompile
 EXPOSE 3000
 
 # Start Rails server
-CMD rails server -b 0.0.0.0
+CMD rm -f /app/tmp/pids/server.pid && rails server -b 0.0.0.0
