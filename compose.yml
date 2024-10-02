@@ -19,8 +19,8 @@ services:
       - postgres
     environment:
       DATABASE_URL: postgres://postgres:secretpassword@postgres/shadone_development
-      GOOGLE_CLIENT_ID: 969106766203-kb99m193t64bjl873948s278vnlvhodo.apps.googleusercontent.com
-      GOOGLE_CLIENT_SECRET: 
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
 
 volumes:
   pgdata:
